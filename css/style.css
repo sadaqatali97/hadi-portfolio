@@ -75,7 +75,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
-    background-color: #040221;
+    background-color: #0E0C38;
 }
 header .navbar {
     padding: 0;
@@ -526,3 +526,29 @@ footer:before {
     margin-bottom: 0;
 }
 /*--- Footer CSS End ---*/
+
+
+
+
+
+/*--- Responsive CSS Start ---*/
+@media (max-width: 767px) {
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .name {
+        font-size: 60px;
+    }
+    .pattern__bottom {
+        right: -67px;
+    }
+    .btn {
+        padding: 0 10px;
+        height: 60px;
+        min-width: 180px;
+        max-width: 250px;
+        font-size: 20px;
+    }
+}
+/*--- Responsive CSS End ---*/
