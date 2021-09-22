@@ -32,7 +32,15 @@ function isotopeMasonry() {
     });
 }
 
-$(window).on("load", function () {
-    isotopeMasonry();
-});
+    $(window).on("load", function () {
+        isotopeMasonry();
+    });
+
 })(jQuery);
+
+// $(document).ready(function(){
+//     $(".nav-item").click(function(){
+//         if((".nav-item")).siblings().hasClass("active");
+//         // $(this).siblings().css({"color": "red", "border": "2px solid red"});
+//     });
+// });
