@@ -1,0 +1,528 @@
+@import "bootstrap.min.css";
+@import "fonts.css";
+@import "font-awesome.min.css";
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.4;
+    background-color: #040221;
+    font-family: 'Poppins';
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+a:hover {
+    text-decoration: none;
+    color: #dc3545;
+}
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container-fluid {
+    padding-left: 75px;
+    padding-right: 75px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.btn {
+    padding: 0 15px;
+    height: 70px;
+    min-width: 200px;
+    width: auto;
+    box-shadow: beige;
+    max-width: 300px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.bg__darkBlue {
+    background-color: #0E0C38 !important;
+}
+.bg__dark {
+    background-color: #040221 !important;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+}
+/*--- global CSS end ---*/
+
+
+/*--- Header CSS Start ---*/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #040221;
+}
+header .navbar {
+    padding: 0;
+    align-items: flex-start;
+}
+header .navbar .navbar-brand {
+    font-size: 80px;
+    color: inherit;
+    font-weight: 400;
+    font-family: 'Freestyle Script';
+    line-height: 1;
+    margin: 0;
+    padding: 10px 0;
+}
+header .navbar .navbar-brand:hover,
+header .navbar .navbar-brand:focus {
+    color: inherit;
+}
+header .navbar .navbar-nav .nav-link,
+header .navbar .navbar-nav .nav-link:focus {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    color: inherit;
+    padding: 50px 20px 20px 20px;
+    line-height: 1.1;
+    position: relative;
+    text-transform: capitalize;
+}
+header .navbar .navbar-nav .nav-link:hover {
+    color: #dc3545;
+}
+header .navbar .navbar-nav .nav-link:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #dc3545;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    opacity: 0;
+    visibility: hidden;
+}
+header .navbar .navbar-nav .active .nav-link {
+    background-color: #dc3545;
+    color: inherit;
+}
+header .navbar .navbar-nav .active .nav-link:after {
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-collapse {
+    margin-left: auto;
+}
+/*--- Header CSS End ---*/
+
+
+/*--- Home CSS Start ---*/
+.home__section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.home__section:before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(20, 41, 99, 0.2);
+    position: absolute;
+    left: -150px;
+    z-index: -1;
+}
+.home__section .container-fluid {
+    position: relative;
+}
+.home__info {
+    max-width: 800px;
+}
+.home__info span {
+    font-size: 30px;
+}
+.name {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.home__info p {
+    font-size: 24px;
+}
+.highlighted__text {
+    color: #dc3545;
+}
+.social__links {
+    display: flex;
+}
+.social__links li {
+    margin-right: 25px;
+}
+.social__links a {
+    font-size: 30px;
+}
+.btns__row {
+    display: flex;
+    margin-top: 40px;
+}
+.btns__row .btn {
+    margin-left: 25px;
+}
+.btns__row .btn:first-child {
+    margin-left: 0;
+}
+
+
+.img {
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    max-width: 35%;
+    transform: translateY(-50%);
+}
+.img img {
+    width: 100%;
+}
+
+.pattern__top {
+    position: absolute;
+    top: -130px;
+    left: 45%;
+    max-width: 30%;
+    transform: translateX(-50%);
+}
+.pattern__top img,
+.pattern__bottom img {
+    width: 100%;
+}
+.pattern__bottom {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}
+/*--- Home CSS End ---*/
+
+
+
+
+
+/*--- About CSS Start ---*/
+.about__section {
+    padding: 70px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.about__me {
+    max-width: 750px;
+}
+.about__me h3 {
+    font-size: 50px;
+    font-weight: 500;
+    list-style: none;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+.about__me p {
+    font-size: 22px;
+    line-height: 1.5;
+    list-style: none;
+    margin-bottom: 45px;
+}
+
+.about__img {
+    padding: 55px;
+    background-color: #0E0C38;
+    position: relative;
+    z-index: 1;
+}
+.about__img:before {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: #dc3545;
+    position: absolute;
+    left: -40%;
+    z-index: -1;
+}
+/*--- About CSS End ---*/
+
+
+/*--- Portfolio CSS Start ---*/
+.portfolio__section {
+    padding: 50px 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+.section__title {
+    font-size: 50px;
+    font-weight: 300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.section__title:after {
+    content: "";
+    width: 230px;
+    height: 2px;
+    background-color: #FF0513;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.filter__tab {
+    display: flex;
+    margin-bottom: 35px;
+}
+.filter__tab a {
+    font-size: 18px;
+    margin-right: 30px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+.filter__tab a:hover,
+.filter__tab a.active {
+    border-color: #FF0513;
+    color: #FF0513;
+}
+.filter__tab li:last-child a {
+    margin-right: 0;
+}
+.works__card  {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 320px;
+    transition: 0.3s all ease;
+}
+.works__card img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.work__info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 5, 19, 0.77);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px 15px 15px 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease;
+    transform: scale(0.77);
+    border-radius: 20px;
+}
+.works__card:hover {
+    transform: scale(1.12);
+}
+.works__card:hover .work__info{
+    opacity: 10;
+    visibility: visible;
+    transform: scale(1);
+}
+.work__info h4 {
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+.work__info p {
+    margin-bottom: 0;
+}
+.work__info h4:before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: -25px;
+    top: 17%;
+}
+.external__arrow {
+    width: 20px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+/*--- Portfolio CSS End ---*/
+
+/*--- Capabilities CSS Start ---*/
+.capabilities__section {
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.title__head {
+    text-align: center;
+    max-width: 1000px;
+    margin:  0 auto 70px;
+}
+.title__head h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title__head h3:after {
+    content: "";
+    width: 230px;
+    height: 2px;
+    background-color: #FF0513;
+    display: inline-block;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.title__head p {
+    font-size: 22px;
+    line-height: 1.35;
+}
+.capability__card {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.capability__card .icon {
+    width: 60px;
+    margin: 0 auto 25px;
+}
+.capability__card h4 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+/*--- Capabilities CSS End ---*/
+
+/*--- Testimonials CSS Start ---*/
+.testimonials__section {
+    padding: 50px 0;
+    min-height: 100vh;
+}
+/*--- Testimonials CSS End ---*/
+
+
+/*--- Contact Section CSS Start ---*/
+.contact__section {
+    padding: 50px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact__section form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.form-control {
+    font-size: 20px;
+    font-weight: 400;
+    color:#040221;
+    border-radius: 0;
+    height: 60px;
+    transition: 0.2s all ease;
+    outline-offset: -15px;
+}
+.form-control:focus {
+    box-shadow: none !important;
+}
+.form-control:focus {
+    outline: 2px solid #dc3545;
+    outline-offset: -5px;
+}
+/*--- Contact Section CSS End ---*/
+
+
+/*--- Footer CSS Start ---*/
+footer {
+    padding: 100px 0 0 0;
+    position: relative;
+}
+footer:before {
+    content: "";
+    width: 2px;
+    height: 70px;
+    background-color: #dc3545;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: absolute;
+}
+.footer__logo {
+    max-width: 250px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+.footer__logo a {
+    font-size: 80px;
+    color: inherit;
+    font-weight: 400;
+    font-family: 'Freestyle Script';
+    line-height: 1;
+    margin: 0;
+    padding: 10px 0;
+}
+.footer__list {
+    display: flex;
+    justify-content: center;
+}
+.footer__list li {
+    padding-right: 5px;
+    font-weight: 500;
+}
+.footer__list li:after {
+    content: "|";
+    font-size: 16px;
+}
+.footer__list li:last-child:after {
+    content: none;
+}
+.footer__list + .footer__list li:after{
+    content: "/";
+}
+
+.footer__bottom {
+    padding: 25px 0;
+    border-top: 1px solid #707070;
+    margin-top: 77px;
+}
+.footer__bottom p {
+    margin-bottom: 0;
+}
+/*--- Footer CSS End ---*/
