@@ -1,6 +1,7 @@
 @import "bootstrap.min.css";
 @import "fonts.css";
 @import "font-awesome.min.css";
+@import "https://unpkg.com/aos@2.3.1/dist/aos.css";
 
 html {
     scroll-behavior: smooth;
@@ -82,13 +83,28 @@ header .navbar {
     align-items: flex-start;
 }
 header .navbar .navbar-brand {
-    font-size: 80px;
     color: inherit;
-    font-weight: 400;
-    font-family: 'Freestyle Script';
-    line-height: 1;
+    font-weight: 300;
     margin: 0;
     padding: 10px 0;
+    font-size: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+.navbar-brand p {
+    margin: 0;
+}
+.navbar-brand span {
+    font-size: 65px;
+    font-family: 'Freestyle Script';
+    padding: 0 0 0 7px;
+    line-height: 60px;
+    top: 9px;
+    position: relative;
+    font-style: normal;
 }
 header .navbar .navbar-brand:hover,
 header .navbar .navbar-brand:focus {
@@ -100,32 +116,52 @@ header .navbar .navbar-nav .nav-link:focus {
     font-weight: 500;
     padding: 0;
     color: inherit;
-    padding: 50px 20px 20px 20px;
+    padding: 50px 15px 20px 15px;
     line-height: 1.1;
     position: relative;
     text-transform: capitalize;
+    z-index: 1;
 }
 header .navbar .navbar-nav .nav-link:hover {
     color: #dc3545;
 }
-header .navbar .navbar-nav .nav-link:after {
+header .navbar .navbar-nav .nav-link:before {
     content: "";
     width: 100%;
-    height: 1px;
-    background-color: #dc3545;
+    height: 0;
+    background-color: darkred;
     position: absolute;
     left: 0;
-    bottom: -7px;
-    opacity: 0;
-    visibility: hidden;
+    top: 0;
+    z-index: -1;
+    transition: 0.25s all ease;
 }
+header .navbar .navbar-nav .nav-link:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: darkred;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: 0.25s all ease;
+}
+header .navbar .navbar-nav .nav-link:hover,
 header .navbar .navbar-nav .active .nav-link {
-    background-color: #dc3545;
-    color: inherit;
+    color: #fff;
 }
+header .navbar .navbar-nav .nav-link:hover:before,
+header .navbar .navbar-nav .active .nav-link:before {
+    height: calc(100% - 7px);
+}
+header .navbar .navbar-nav .nav-link:hover:after,
 header .navbar .navbar-nav .active .nav-link:after {
-    opacity: 1;
-    visibility: visible;
+    width: 100%;
+}
+header .navbar .navbar-nav .nav-link:hover:before,
+header .navbar .navbar-nav .nav-link:hover:after {
+    background-color: #dc3545;
 }
 .navbar-collapse {
     margin-left: auto;
@@ -205,9 +241,13 @@ header .navbar .navbar-nav .active .nav-link:after {
 }
 .home__info p {
     font-size: 24px;
+    display: flex;
+    /* align-items: center; */
 }
 .highlighted__text {
     color: #dc3545;
+    padding-left: 5px;
+    top: 3px;
 }
 .social__links {
     display: flex;
@@ -232,14 +272,21 @@ header .navbar .navbar-nav .active .nav-link:after {
 
 .img {
     position: absolute;
-    right: 7%;
-    top: 50%;
-    max-width: 35%;
+    right: 15%;
+    top: 60%;
+    max-width: 27%;
     transform: translateY(-50%);
     z-index: 1;
 }
 .img img {
     width: 100%;
+}
+.pattern-inner{
+    position: absolute;
+    left: -40px;
+    z-index: -1;
+    bottom: -40px;
+    max-width: 320px;
 }
 
 .pattern__top {
@@ -270,6 +317,7 @@ header .navbar .navbar-nav .active .nav-link:after {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 .about__me {
     max-width: 750px;
@@ -289,10 +337,19 @@ header .navbar .navbar-nav .active .nav-link:after {
 }
 
 .about__img {
-    padding: 55px;
+    padding: 35px;
     background-color: #0E0C38;
     position: relative;
     z-index: 1;
+    max-height: 800px;
+    box-sizing: border-box;
+    display: flex;
+}
+.about__img img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
 }
 .about__img:before {
     content: "";
@@ -528,13 +585,26 @@ footer:before {
     text-align: center;
 }
 .footer__logo a {
-    font-size: 80px;
     color: inherit;
-    font-weight: 400;
-    font-family: 'Freestyle Script';
-    line-height: 1;
+    font-weight: 300;
     margin: 0;
     padding: 10px 0;
+    font-size: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+.footer__logo a span {
+    font-size: 65px;
+    font-family: 'Freestyle Script';
+    padding: 0 0 0 7px;
+    line-height: 60px;
+    top: 9px;
+    position: relative;
+    font-style: normal;
 }
 .footer__list {
     display: flex;
@@ -570,6 +640,26 @@ footer:before {
 
 
 /*--- Responsive CSS Start ---*/
+@media (max-width: 1440px) {
+    .img {
+        right: 75px;
+        max-width: 34%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container-fluid {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .img {
+        right: 35px;
+    }
+    .home__info {
+        max-width: 600px;
+    }
+}
+
 /* Responsive - 1199 */
 @media (max-width: 1199px) {
     body {
