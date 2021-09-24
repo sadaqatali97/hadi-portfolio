@@ -45,7 +45,7 @@
 
 $(window).scroll(function() {
   var scrollTop = $(this).scrollTop();
-  if (scrollTop > 300) {
+  if (scrollTop > 100) {
       $("header").addClass("shrink");
   } else {
     $("header").removeClass("shrink");

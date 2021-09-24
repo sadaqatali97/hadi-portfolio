@@ -120,6 +120,7 @@ header .navbar .navbar-brand {
 }
 .navbar-brand p {
     margin: 0;
+    background-color: red;
 }
 .navbar-brand span {
     font-size: 65px;
@@ -261,6 +262,7 @@ header .navbar .navbar-nav .nav-link:hover:after {
 }
 .home__info span {
     font-size: 30px;
+    line-height: 1.1;
 }
 .name {
     font-size: 100px;
@@ -467,7 +469,6 @@ header .navbar .navbar-nav .nav-link:hover:after {
     visibility: hidden;
     transition: 0.3s all ease;
     transform: scale(0.77);
-    border-radius: 20px;
 }
 .works__card:hover {
     transform: scale(1.12);
@@ -822,6 +823,9 @@ footer:before {
     body {
         font-size: 16px;
     }
+    .navbar-brand span, .footer__logo a span {
+        /* width: 55px; */
+    }
     section {
         padding: 35px 0;
     }
@@ -835,7 +839,7 @@ footer:before {
         font-size: 18px;
     }
     .home__info {
-        padding-top: 37%;
+        padding-top: 7%;
     }
     .home__info p {
         margin-bottom: 10px;
