@@ -33,13 +33,23 @@
   }
 
     $(document).ready(function() {
+      // Add acto class on nav-item
         $('.nav-item').click(function(){
             $('.nav-item').removeClass("active");
             $(this).addClass("active");
         });
+
+        // init isotopes
         isotopeMasonry();
 
+        // init AOS
         AOS.init();
+
+        // Close Nav on scroll
+        $('.nav-item a').click(function(){
+          $('.navbar-collapse').removeClass("show");
+          $(".ham").removeClass("active");
+      });
     });
 })(jQuery);
 
@@ -54,10 +64,7 @@ $(window).scroll(function() {
 
 
 
-
-
-
-
+// Skilss Typing Js
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
@@ -98,4 +105,45 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+
+
+
+
+
+
+
+// Hide and show header on scroll
+const body = document.body;
+const triggerMenu = document.querySelector("header");
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+let lastScroll = 0;
+
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    console.log("On top");
+    body.classList.remove(scrollUp);
+    return;
+  } else {
+    console.log("On bottom");
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
 });
