@@ -39,6 +39,11 @@
             $(this).addClass("active");
         });
 
+        // Preloader jQuery
+        setTimeout(function(){ 
+          $(".preloader").css("display", "none");          
+         }, 2000);
+
         // init isotopes
         isotopeMasonry();
 
